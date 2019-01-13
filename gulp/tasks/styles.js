@@ -9,5 +9,9 @@ cssImport = require('postcss-import');
 gulp.task('styles', function(){
    return gulp.src('./app/assets/styles/style.css')
       .pipe(postCSS([cssImport, cssVars, nested, autoPrefixer]))
+      .on('error', function(errorInfo){
+         console.log(errorInfo.toString());
+         this.emit('end');
+      })
       .pipe(gulp.dest('./app/temp/styles/'));
 });
