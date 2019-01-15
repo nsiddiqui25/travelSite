@@ -7,4 +7,13 @@
    margin-left: auto;
    margin-right: auto;
       /* centers the content */
+
+   &--medium {
+      max-width: 975px;
+   }
+
+   .wrapper {
+      padding-left: 0;
+      padding-right: 0;
+   }
 }
