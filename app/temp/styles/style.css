@@ -359,6 +359,10 @@ img {
    height: auto;
 }
 
+* {
+   box-sizing: border-box;
+}
+
 .large-hero {
    border-bottom: 10px solid #2f5572;
    position: relative;
@@ -447,6 +451,7 @@ img {
    }
 
 .wrapper {
+   overflow: hidden;
    padding-left: 20px;
    padding-right: 20px;
    max-width: 1200px;
@@ -531,4 +536,30 @@ img {
 
 .headline--b-margin-large {
       margin-bottom: 1.5em;
+   }
+
+.row::after {
+      content: "";
+      clear: both;
+      display: table;
+   }
+
+.row--gutters {
+      margin-right: -65px;
+   }
+
+.row--gutters > div {
+      padding-right: 65px;
+   }
+
+@media (min-width: 800px){
+      .row__medium-4 {
+         float: left;
+         width: 33.33333%;
+      }
+
+      .row__medium-8 {
+         float: left;
+         width: 66.66666%;
+      }
    }
